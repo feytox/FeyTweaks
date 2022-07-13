@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "feytweaks",
+  "version": "${version}",
+  "name": "FeyTweaks",
+  "description": "Mod for optimizing signs and beacons.",
+  "authors": [
+    "Feytox"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/feytweaks",
+    "sources": "https://github.com/feytox/feytweaks",
+    "issues": "https://github.com/feytox/feytweaks/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/feytweaks/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "name.uwu.feytox.feytweaks.client.FeytweaksClient"
+    ],
+    "main": [
+      "name.uwu.feytox.feytweaks.Feytweaks"
+    ]
+  },
+  "mixins": [
+    "feytweaks.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}

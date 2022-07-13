@@ -1,0 +1,18 @@
+{
+  "feytweaks.midnightconfig.title": "FeyTweaks",
+
+  "key.feytweaks.openConfigKey": "Open config menu",
+  "feytweaks.midnightconfig.toggleMod": "Enable mod: ",
+
+
+  "feytweaks.midnightconfig.signs": "§l§nSigns tweaks",
+  "feytweaks.midnightconfig.hideTexts": "Hide texts on the signs: ",
+  "feytweaks.midnightconfig.textDistance": "Min. distance: ",
+  "feytweaks.midnightconfig.hideGlow": "Hide glow effect on the signs: ",
+
+
+  "feytweaks.midnightconfig.beacons": "§l§nBeacons tweaks",
+  "feytweaks.midnightconfig.hideBeam": "Hide the beams of beacons: ",
+  "feytweaks.midnightconfig.beamDistance": "Min. distance: ",
+  "feytweaks.midnightconfig.optimizeBeam": "Enable beam optimization: "
+}
