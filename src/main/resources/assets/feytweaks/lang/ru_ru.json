@@ -7,10 +7,12 @@
   "feytweaks.midnightconfig.signs": "§l§nОптимизация табличек",
   "feytweaks.midnightconfig.hideTexts": "Скрывать текст на табличках: ",
   "feytweaks.midnightconfig.textDistance": "Минимальная дистанция для скрытия текста: ",
+  "feytweaks.midnightconfig.signCulling": "Включить скрытие текста вне поля зрения: ",
   "feytweaks.midnightconfig.hideGlow": "Скрывать эффект свечения табличек: ",
 
   "feytweaks.midnightconfig.beacons": "§l§nОптимизация маяков",
   "feytweaks.midnightconfig.hideBeam": "Скрывать лучи маяков: ",
   "feytweaks.midnightconfig.beamDistance": "Минимальная дистанция для скрытия: ",
-  "feytweaks.midnightconfig.optimizeBeam": "Включить оптимизацию лучей маяков: "
+  "feytweaks.midnightconfig.optimizeBeam": "Включить оптимизацию лучей маяков: ",
+  "feytweaks.midnightconfig.beaconCulling": "Включить скрытие лучей вне поля зрения: "
 }

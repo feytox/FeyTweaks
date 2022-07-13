@@ -5,10 +5,12 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "SignBlockEntityMixin",
-    "accessors.SignBlockEntityAccessor"
+    "accessors.SignBlockEntityAccessor",
+    "accessors.WorldRendererAccessor"
   ],
   "client": [
     "BeaconBlockEntityRendererMixin",
+    "SignBlockEntityRendererMixin",
     "accessors.SignBlockEntityRendererAccessor"
   ],
   "injectors": {

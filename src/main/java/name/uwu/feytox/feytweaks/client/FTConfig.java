@@ -13,7 +13,10 @@ public class FTConfig extends MidnightConfig {
     public static boolean hideTexts = true;
 
     @Entry
-    public static double textDistance = 5;
+    public static double textDistance = 10;
+
+    @Entry
+    public static boolean signCulling = true;
 
     @Entry
     public static boolean hideGlow = true;
@@ -25,7 +28,10 @@ public class FTConfig extends MidnightConfig {
     public static boolean hideBeam = true;
 
     @Entry
-    public static double beamDistance = 5;
+    public static double beamDistance = 15;
+
+    @Entry
+    public static boolean beaconCulling = true;
 
     @Entry
     public static boolean optimizeBeam = true;

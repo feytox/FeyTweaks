@@ -4,6 +4,8 @@ import name.uwu.feytox.feytweaks.client.FTConfig;
 import name.uwu.feytox.feytweaks.client.FeytweaksClient;
 import net.minecraft.block.entity.SignBlockEntity;
 import net.minecraft.client.render.block.entity.BeaconBlockEntityRenderer;
+import net.minecraft.client.render.block.entity.BlockEntityRenderer;
+import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
 import net.minecraft.text.OrderedText;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Mixin;
