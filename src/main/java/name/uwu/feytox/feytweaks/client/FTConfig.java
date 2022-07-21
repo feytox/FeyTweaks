@@ -2,6 +2,7 @@ package name.uwu.feytox.feytweaks.client;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 
+
 public class FTConfig extends MidnightConfig {
     @Entry
     public static boolean toggleMod = true;
@@ -13,13 +14,28 @@ public class FTConfig extends MidnightConfig {
     public static boolean hideTexts = true;
 
     @Entry
-    public static double textDistance = 10;
+    public static double textDistance = 5;
 
     @Entry
     public static boolean signCulling = true;
 
     @Entry
-    public static boolean hideGlow = true;
+    public static boolean simpleGlow = true;
+
+    @Entry
+    public static boolean glowToShadow = false;
+
+    @Entry
+    public static boolean fastGlowToShadow = false;
+
+    @Entry
+    public static boolean hideGlow = false;
+
+    @Entry(min=0)
+    public static double hideGlowDistance = 5;
+
+    @Entry
+    public static boolean optimizeGlow = false;
 
     @Comment
     public static Comment beacons;

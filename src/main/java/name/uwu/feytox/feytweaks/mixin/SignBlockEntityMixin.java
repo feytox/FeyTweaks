@@ -3,6 +3,7 @@ package name.uwu.feytox.feytweaks.mixin;
 import name.uwu.feytox.feytweaks.client.FTConfig;
 import name.uwu.feytox.feytweaks.client.FeytweaksClient;
 import net.minecraft.block.entity.SignBlockEntity;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.block.entity.BeaconBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
@@ -21,7 +22,8 @@ public class SignBlockEntityMixin {
 
     @Inject(method = "isGlowingText", at = @At("HEAD"), cancellable = true)
     public void onIsGlowingText(CallbackInfoReturnable<Boolean> cir) {
-        if (FTConfig.toggleMod && FTConfig.hideGlow) {
+        if (FTConfig.toggleMod && FTConfig.hideGlow
+                && ((SignBlockEntity)(Object) this).getPos().getSquaredDistance(MinecraftClient.getInstance().player.getPos()) >= Math.pow(FTConfig.hideGlowDistance, 2)) {
             cir.setReturnValue(false);
         }
     }
