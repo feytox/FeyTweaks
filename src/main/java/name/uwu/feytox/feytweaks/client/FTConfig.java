@@ -41,7 +41,7 @@ public class FTConfig extends MidnightConfig {
     public static Comment beacons;
 
     @Entry
-    public static boolean hideBeam = true;
+    public static boolean hideBeam = false;
 
     @Entry
     public static double beamDistance = 15;
