@@ -47,12 +47,12 @@ public class TextRendererMixin {
     }
 
 
-    @ModifyVariable(method = "drawWithOutline", at = @At("STORE"), name = "j")
+    @ModifyVariable(method = "drawWithOutline", at = @At("STORE"), ordinal = 5)
     private int getOutlineRenderJ(int j) {
         return FTConfig.glowToShadow ? 1 : j;
     }
 
-    @ModifyVariable(method = "drawWithOutline", at = @At("STORE"), name = "k")
+    @ModifyVariable(method = "drawWithOutline", at = @At("STORE"), ordinal = 6)
     private int getOutlineRenderK(int k) {
         return FTConfig.glowToShadow ? 1 : k;
     }
