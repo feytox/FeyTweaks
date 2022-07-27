@@ -4,22 +4,20 @@
   "key.feytweaks.openConfigKey": "Open config menu",
   "feytweaks.midnightconfig.toggleMod": "Enable mod: ",
 
-
-  "feytweaks.midnightconfig.signs": "§l§nSigns tweaks",
-  "feytweaks.midnightconfig.hideTexts": "Hide texts on the signs: ",
-  "feytweaks.midnightconfig.textDistance": "Min. distance: ",
-  "feytweaks.midnightconfig.signCulling": "Enable text 'culling': ",
-  "feytweaks.midnightconfig.simpleGlow": "Hide outline of glow effect: ",
+  "feytweaks.midnightconfig.signs": "§l§nSigns",
+  "feytweaks.midnightconfig.hideTexts": "Hide text in the distance: ",
+  "feytweaks.midnightconfig.textDistance": "Min. distance to hide §ntext§r: ",
+  "feytweaks.midnightconfig.signCulling": "Text culling: ",
+  "feytweaks.midnightconfig.simpleGlow": "Always hide glow effect: ",
   "feytweaks.midnightconfig.glowToShadow": "Outline of glow effect -> Text shadow: ",
   "feytweaks.midnightconfig.fastGlowToShadow": "Outline of glow effect -> Text shadow + Optimization [Beta]: ",
-  "feytweaks.midnightconfig.hideGlow": "Fully hide glow effect on the signs: ",
-  "feytweaks.midnightconfig.hideGlowDistance": "Min. distance for glow hiding: ",
-  "feytweaks.midnightconfig.optimizeGlow": "Enable glow optimization [Beta]: ",
+  "feytweaks.midnightconfig.hideGlow": "Hide glow effect in the distance: ",
+  "feytweaks.midnightconfig.hideGlowDistance": "Min. distance to hide §nglow effect§r: ",
+  "feytweaks.midnightconfig.optimizeGlow": "Glow optimization [Beta]: ",
 
-
-  "feytweaks.midnightconfig.beacons": "§l§nBeacons tweaks",
-  "feytweaks.midnightconfig.hideBeam": "Hide the beams of beacons: ",
-  "feytweaks.midnightconfig.beamDistance": "Min. distance: ",
-  "feytweaks.midnightconfig.beaconCulling": "Enable beacon beam 'culling': ",
-  "feytweaks.midnightconfig.optimizeBeam": "Enable beam optimization: "
+  "feytweaks.midnightconfig.beacons": "§l§nBeacons",
+  "feytweaks.midnightconfig.hideBeam": "Hide beams in the distance: ",
+  "feytweaks.midnightconfig.beamDistance": "Min. distance to hide beams: ",
+  "feytweaks.midnightconfig.beaconCulling": "Beam culling: ",
+  "feytweaks.midnightconfig.optimizeBeam": "Beam optimization: "
 }
