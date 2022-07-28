@@ -1,53 +1,31 @@
 ## EN
 The mod allows you to optimize the signs and beacons, thereby increasing your FPS.
-<details>
-  <summary>All features of FeyTweaks</summary>
+* Features of FeyTweaks:
+  + Sign optimization
+    - Fully hide the text on the signs at a distance (ON by default)
+    - Hiding text out of view (ON by default)
+    - Hiding the outline of glowing text (ON by default)
+    - Convert text outline to shadow: normal mode and fast mode [Beta]
+    - Fully hide the text glow effect at a distance
+    - Glow effect optimization [Бета]
+  + Beacon optimization
+    - Fully hide the beacon beams at a distance
+    - Hiding beams out of view (ON by default)
+    - Beacon beams optimization (ON by default)
 
-<details>
-  <summary>Sign optimization</summary>
-  
-- Fully hide the text on the signs at a distance (ON by default)
-- Hiding text out of view (ON by default)
-- Hiding the outline of glowing text (ON by default)
-- Convert text outline to shadow: normal mode and fast mode [Beta]
-- Fully hide the text glow effect at a distance
-- Glow effect optimization [Бета]
-
-</details>
-
-<details>
-  <summary>Beacon optimization</summary>
-
-- Fully hide the beacon beams at a distance
-- Hiding beams out of view (ON by default)
-- Beacon beams optimization (ON by default)
-
-</details>
-</details>
 
 ## RU
 Мод позволяет оптимизировать таблички и маяки, тем самым повышая ваш FPS. 
-<details>
-  <summary>Все функции FeyTweaks</summary>
-
-<details>
-  <summary>Оптимизация табличек</summary>
-  
-- Полное скрытие текста на табличках на расстоянии (по-умолчанию ВКЛ)
-- Скрытие текста вне поля зрения (по-умолчанию ВКЛ)
-- Скрытие обводки светящегося текста (по-умолчанию ВКЛ)
-- Преобразование обводки текста в тень (обычный/быстрый режим)
-- Полное скрытие эффекта свечения текста на расстоянии
-- Оптимизация эффекта свечения [Бета]
-
-</details>
-
-<details>
-  <summary>Оптимизация маяков</summary>
-
-- Полное скрытие лучей маяков на расстоянии
-- Скрытие лучей маяков вне поля зрения (по-умолчанию ВКЛ)
-- Оптимизация лучей маяков (по-умолчанию ВКЛ)
-
-</details>
-</details>
+* Все функции FeyTweaks
+  + Оптимизация табличек
+    - Полное скрытие текста на табличках на расстоянии (по-умолчанию ВКЛ)
+    - Скрытие текста вне поля зрения (по-умолчанию ВКЛ)
+    - Скрытие обводки светящегося текста (по-умолчанию ВКЛ)
+    - Преобразование обводки текста в тень (обычный/быстрый режим)
+    - Полное скрытие эффекта свечения текста на расстоянии
+    - Оптимизация эффекта свечения [Бета]
+  + Оптимизация маяков</summary>
+    - Полное скрытие лучей маяков на расстоянии
+    - Скрытие лучей маяков вне поля зрения (по-умолчанию ВКЛ)
+    - Оптимизация лучей маяков (по-умолчанию ВКЛ)
+    
