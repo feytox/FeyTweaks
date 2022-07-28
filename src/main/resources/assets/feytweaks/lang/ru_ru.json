@@ -13,7 +13,7 @@
   "feytweaks.midnightconfig.fastGlowToShadow": "Обводка светящегося текста -> Тень текста + Оптимизация [Бета]: ",
   "feytweaks.midnightconfig.hideGlowDistance": "Минимальная дистанция для скрытия §nэффекта свечения§r: ",
   "feytweaks.midnightconfig.hideGlow": "Cкрывать эффект свечения на дистанции: ",
-  "feytweaks.midnightconfig.optimizeGlow": "Включить оптимизацию эффекта свечения [Бета]: ",
+  "feytweaks.midnightconfig.optimizeGlow": "Оптимизация эффекта свечения [Бета]: ",
 
   "feytweaks.midnightconfig.beacons": "§l§nМаяки",
   "feytweaks.midnightconfig.hideBeam": "Скрывать лучи на дистанции: ",
