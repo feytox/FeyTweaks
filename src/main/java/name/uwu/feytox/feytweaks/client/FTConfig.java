@@ -15,6 +15,12 @@ public class FTConfig extends MidnightConfig {
 
     @Entry
     public static double textDistance = 5;
+    
+    @Entry
+    public static boolean hideGlow = false;
+
+    @Entry(min=0)
+    public static double hideGlowDistance = 5;
 
     @Entry
     public static boolean signCulling = true;
@@ -27,12 +33,6 @@ public class FTConfig extends MidnightConfig {
 
     @Entry
     public static boolean fastGlowToShadow = false;
-
-    @Entry
-    public static boolean hideGlow = false;
-
-    @Entry(min=0)
-    public static double hideGlowDistance = 5;
 
     @Entry
     public static boolean optimizeGlow = false;
