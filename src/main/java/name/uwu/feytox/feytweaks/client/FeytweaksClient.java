@@ -4,32 +4,19 @@ import name.uwu.feytox.feytweaks.mixin.accessors.WorldRendererAccessor;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.client.command.v1.ClientCommandManager;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.fabricmc.fabric.impl.client.indigo.renderer.render.ChunkRenderInfo;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
 import net.minecraft.block.entity.BeaconBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.SignBlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.Frustum;
-import net.minecraft.client.render.WorldRenderer;
-import net.minecraft.client.render.block.BlockModelRenderer;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.command.argument.ArgumentTypes;
-import net.minecraft.command.argument.BlockPosArgumentType;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.chunk.Chunk;
 import org.lwjgl.glfw.GLFW;
-
-import static net.fabricmc.fabric.api.client.command.v1.ClientCommandManager.argument;
-import static net.fabricmc.fabric.api.client.command.v1.ClientCommandManager.literal;
 
 @Environment(EnvType.CLIENT)
 public class FeytweaksClient implements ClientModInitializer {
