@@ -17,7 +17,7 @@ public class SignBlockEntityRendererMixin {
     @Inject(method = "render(Lnet/minecraft/block/entity/SignBlockEntity;FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;II)V",
     at = @At("HEAD"), cancellable = true)
     public void onRender(SignBlockEntity signBlockEntity, float f, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, int j, CallbackInfo ci) {
-        if (!FeytweaksClient.isOnScreen(signBlockEntity) && FTConfig.signCulling) {
+        if (!FeytweaksClient.isOnScreen(signBlockEntity) && FTConfig.signCulling && FTConfig.toggleMod) {
             ci.cancel();
         }
     }
