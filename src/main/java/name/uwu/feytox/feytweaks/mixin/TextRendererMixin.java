@@ -20,7 +20,7 @@ public class TextRendererMixin {
 
     @Inject(method = "drawWithOutline", at = @At("HEAD"), cancellable = true)
     public void onDrawWithOutline(OrderedText text, float x, float y, int color, int outlineColor, Matrix4f matrix, VertexConsumerProvider vertexConsumers, int light, CallbackInfo ci) {
-        if (FTConfig.simpleGlow || FTConfig.fastGlowToShadow) {
+        if ((FTConfig.simpleGlow || FTConfig.fastGlowToShadow) && FTConfig.toggleMod) {
             if (color == DyeColor.BLACK.getSignColor()) {
                 color = outlineColor;
             }
@@ -36,7 +36,7 @@ public class TextRendererMixin {
             at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Matrix4f;addToLastColumn(Lnet/minecraft/util/math/Vec3f;)V"),
             cancellable = true)
     private void onDrawInternal(OrderedText text, float x, float y, int color, boolean shadow, Matrix4f matrix, VertexConsumerProvider vertexConsumerProvider, boolean seeThrough, int backgroundColor, int light, CallbackInfoReturnable<Integer> cir) {
-        if (FTConfig.fastGlowToShadow) {
+        if (FTConfig.fastGlowToShadow && FTConfig.toggleMod) {
             Matrix4f matrix4f = matrix.copy();
             matrix4f.addToLastColumn(new Vec3f(0.0F, 0.0F, 0.000009F));
 
