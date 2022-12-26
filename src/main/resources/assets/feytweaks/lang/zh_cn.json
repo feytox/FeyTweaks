@@ -1,0 +1,23 @@
+{
+  "feytweaks.midnightconfig.title": "FeyTweaks",
+
+  "key.feytweaks.openConfigKey": "打开设置菜单",
+  "feytweaks.midnightconfig.toggleMod": "启用模组： ",
+
+  "feytweaks.midnightconfig.signs": "§l§n告示牌",
+  "feytweaks.midnightconfig.hideTexts": "以距离隐藏文本： ",
+  "feytweaks.midnightconfig.textDistance": "隐藏§n文本§r的最小距离： ",
+  "feytweaks.midnightconfig.signCulling": "文本剔除： ",
+  "feytweaks.midnightconfig.simpleGlow": "始终隐藏发光效果： ",
+  "feytweaks.midnightconfig.glowToShadow": "发光效果的轮廓 -> 文本阴影。",
+  "feytweaks.midnightconfig.fastGlowToShadow": "发光效果的轮廓 -> 文本阴影+优化[Beta]： ",
+  "feytweaks.midnightconfig.hideGlow": "在远处隐藏发光效果： ",
+  "feytweaks.midnightconfig.hideGlowDistance": "隐藏§n发光效果§r的最小距离： ",
+  "feytweaks.midnightconfig.optimizeGlow": "荧光优化[Beta]： ",
+
+  "feytweaks.midnightconfig.beacons": "§l§n信标",
+  "feytweaks.midnightconfig.hideBeam": "隐藏在远处的光束： ",
+  "feytweaks.midnightconfig.beamDistance": "隐藏光束的最小距离： ",
+  "feytweaks.midnightconfig.beaconCulling": "光束剔除： ",
+  "feytweaks.midnightconfig.optimizeBeam": "光束优化： "
+}
