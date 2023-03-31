@@ -25,21 +25,20 @@ public class TextRendererMixin {
                 color = outlineColor;
             }
 
-            fDrawInternal(text, x, y, color, FTConfig.fastGlowToShadow, matrix, vertexConsumers, false,
-                    0, light);
+            fDrawInternal(text, x, y, color, FTConfig.fastGlowToShadow, matrix, vertexConsumers, light);
             ci.cancel();
         }
     }
 
-    private void fDrawInternal(OrderedText text, float x, float y, int color, boolean shadow, Matrix4f matrix, VertexConsumerProvider vertexConsumerProvider, boolean seeThrough, int backgroundColor, int light) {
+    private void fDrawInternal(OrderedText text, float x, float y, int color, boolean shadow, Matrix4f matrix, VertexConsumerProvider vertexConsumerProvider, int light) {
         color = (color & -67108864) == 0 ? color | -16777216 : color;
         Matrix4f matrix4f = new Matrix4f(matrix);
         TextRenderer textRenderer = ((TextRenderer)(Object) this);
         if (shadow) {
-            ((TextRendererAccessor) textRenderer).callDrawLayer(text, x, y, color, true, matrix, vertexConsumerProvider, seeThrough, backgroundColor, light);
+            ((TextRendererAccessor) textRenderer).callDrawLayer(text, x, y, color, true, matrix, vertexConsumerProvider, TextRenderer.TextLayerType.NORMAL, 0, light);
             matrix4f.translate(new Vector3f(0.0F, 0.0F, 0.03F));
         }
-        ((TextRendererAccessor) textRenderer).callDrawLayer(text, x, y, color, false, matrix, vertexConsumerProvider, seeThrough, backgroundColor, light);
+        ((TextRendererAccessor) textRenderer).callDrawLayer(text, x, y, color, false, matrix, vertexConsumerProvider, TextRenderer.TextLayerType.NORMAL, 0, light);
     }
 
 
@@ -62,11 +61,10 @@ public class TextRendererMixin {
             Matrix4f matrix4f = new Matrix4f(matrix);
             matrix4f.translate(new Vector3f(0.0F, 0.0F, 0.0051F));
 
-            TextRenderer.Drawer drawer2 = ((TextRenderer) (Object) this).new Drawer(vertexConsumers, x, y,
-                    TextRendererAccessor.callTweakTransparency(color), false, matrix4f,
-                    false, light);
-            text.accept(drawer2);
-            drawer2.drawLayer(0, x);
+            TextRenderer.Drawer drawer = ((TextRenderer) (Object) this).new Drawer(vertexConsumers, x, y,
+                    TextRendererAccessor.callTweakTransparency(color), false, matrix4f, TextRenderer.TextLayerType.NORMAL, light);
+            text.accept(drawer);
+            drawer.drawLayer(0, x);
 
             ci.cancel();
         }
