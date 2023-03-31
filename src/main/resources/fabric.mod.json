@@ -18,10 +18,10 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "name.uwu.feytox.feytweaks.client.FeytweaksClient"
+      "ru.feytox.feytweaks.client.FeytweaksClient"
     ],
     "main": [
-      "name.uwu.feytox.feytweaks.Feytweaks"
+      "ru.feytox.feytweaks.Feytweaks"
     ]
   },
   "mixins": [
