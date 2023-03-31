@@ -1,4 +1,4 @@
-package name.uwu.feytox.feytweaks.client;
+package ru.feytox.feytweaks.client;
 
 import eu.midnightdust.lib.config.MidnightConfig;
 

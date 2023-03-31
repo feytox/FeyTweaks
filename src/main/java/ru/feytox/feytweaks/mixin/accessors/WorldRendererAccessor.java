@@ -1,4 +1,4 @@
-package name.uwu.feytox.feytweaks.mixin.accessors;
+package ru.feytox.feytweaks.mixin.accessors;
 
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.WorldRenderer;

@@ -1,7 +1,5 @@
-package name.uwu.feytox.feytweaks.mixin;
+package ru.feytox.feytweaks.mixin;
 
-import name.uwu.feytox.feytweaks.client.FTConfig;
-import name.uwu.feytox.feytweaks.client.FeytweaksClient;
 import net.minecraft.block.entity.BeaconBlockEntity;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.RenderLayer;
@@ -18,6 +16,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import ru.feytox.feytweaks.client.FTConfig;
+import ru.feytox.feytweaks.client.FeytweaksClient;
 
 @Mixin(BeaconBlockEntityRenderer.class)
 public class BeaconBlockEntityRendererMixin {

@@ -1,7 +1,5 @@
-package name.uwu.feytox.feytweaks.mixin;
+package ru.feytox.feytweaks.mixin;
 
-import name.uwu.feytox.feytweaks.client.FTConfig;
-import name.uwu.feytox.feytweaks.mixin.accessors.TextRendererAccessor;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.text.OrderedText;
@@ -13,6 +11,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import ru.feytox.feytweaks.client.FTConfig;
+import ru.feytox.feytweaks.mixin.accessors.TextRendererAccessor;
 
 
 @Mixin(TextRenderer.class)

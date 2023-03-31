@@ -1,4 +1,4 @@
-package name.uwu.feytox.feytweaks;
+package ru.feytox.feytweaks;
 
 import net.fabricmc.api.ModInitializer;
 
