@@ -1,19 +1,19 @@
 package ru.feytox.feytweaks.mixin.accessors;
 
-import net.minecraft.client.font.TextRenderer;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.text.OrderedText;
-import org.joml.Matrix4f;
+import com.mojang.math.Matrix4f;
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.util.FormattedCharSequence;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-@Mixin(TextRenderer.class)
+@Mixin(Font.class)
 public interface TextRendererAccessor {
     @Invoker
-    static int callTweakTransparency(int argb) {
+    static int callAdjustColor(int argb) {
         throw new UnsupportedOperationException();
     }
 
     @Invoker
-    float callDrawLayer(OrderedText text, float x, float y, int color, boolean shadow, Matrix4f matrix, VertexConsumerProvider vertexConsumerProvider, TextRenderer.TextLayerType layerType, int underlineColor, int light);
+    float callRenderText(FormattedCharSequence text, float x, float y, int color, boolean shadow, Matrix4f matrix, MultiBufferSource vertexConsumerProvider, boolean layerType, int underlineColor, int light);
 }

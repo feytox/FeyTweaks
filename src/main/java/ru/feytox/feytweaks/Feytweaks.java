@@ -1,10 +1,8 @@
 package ru.feytox.feytweaks;
 
-import net.fabricmc.api.ModInitializer;
+import net.minecraftforge.fml.common.Mod;
 
-public class Feytweaks implements ModInitializer {
-    @Override
-    public void onInitialize() {
-
-    }
+@Mod(Feytweaks.MOD_ID)
+public class Feytweaks {
+    public static final String MOD_ID = "feytweaks";
 }

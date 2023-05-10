@@ -1,7 +1,7 @@
 package ru.feytox.feytweaks.client;
 
 import eu.midnightdust.lib.config.MidnightConfig;
-
+import ru.feytox.feytweaks.Feytweaks;
 
 public class FTConfig extends MidnightConfig {
     @Entry
@@ -53,6 +53,6 @@ public class FTConfig extends MidnightConfig {
     public static boolean optimizeBeam = true;
 
     public static void init() {
-        FTConfig.init(FeytweaksClient.MOD_ID, FTConfig.class);
+        FTConfig.init(Feytweaks.MOD_ID, FTConfig.class);
     }
 }
