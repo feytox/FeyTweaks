@@ -6,7 +6,6 @@ import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.item.DyeColor;
-import org.apache.logging.log4j.core.pattern.TextRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -33,7 +32,7 @@ public class TextRendererMixin {
     private void fDrawInternal(FormattedCharSequence text, float x, float y, int color, boolean shadow, Matrix4f matrix, MultiBufferSource vertexConsumerProvider, int light) {
         color = (color & -67108864) == 0 ? color | -16777216 : color;
         Matrix4f matrix4f = new Matrix4f(matrix);
-        TextRenderer textRenderer = ((TextRenderer) (Object) this);
+        Font textRenderer = ((Font) (Object) this);
         if (shadow) {
             ((TextRendererAccessor) textRenderer).callRenderText(text, x, y, color, true, matrix, vertexConsumerProvider, false, 0, light);
             matrix4f.translate(new Vector3f(0.0F, 0.0F, 0.03F));
