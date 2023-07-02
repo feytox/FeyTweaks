@@ -1,23 +1,23 @@
 package ru.feytox.feytweaks.mixin;
 
-import net.minecraft.block.entity.SignBlockEntity;
-import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.block.entity.SignBlockEntityRenderer;
-import net.minecraft.client.util.math.MatrixStack;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import ru.feytox.feytweaks.client.FTConfig;
-import ru.feytox.feytweaks.client.FeytweaksClient;
+import ru.feytox.feytweaks.client.ClientEvents;
 
-@Mixin(SignBlockEntityRenderer.class)
+@Mixin(SignRenderer.class)
 public class SignBlockEntityRendererMixin {
 
-    @Inject(method = "render(Lnet/minecraft/block/entity/SignBlockEntity;FLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;II)V",
+    @Inject(method = "render(Lnet/minecraft/world/level/block/entity/SignBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V",
     at = @At("HEAD"), cancellable = true)
-    public void onRender(SignBlockEntity signBlockEntity, float f, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, int j, CallbackInfo ci) {
-        if (!FeytweaksClient.isOnScreen(signBlockEntity) && FTConfig.signCulling && FTConfig.toggleMod) {
+    public void onRender(SignBlockEntity signBlockEntity, float f, PoseStack matrixStack, MultiBufferSource vertexConsumerProvider, int i, int j, CallbackInfo ci) {
+        if (!ClientEvents.isOnScreen(signBlockEntity) && FTConfig.signCulling && FTConfig.toggleMod) {
             ci.cancel();
         }
     }

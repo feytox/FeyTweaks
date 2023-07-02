@@ -1,0 +1,23 @@
+modLoader = "javafml" #mandatory
+loaderVersion = "[43,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license = "MIT"
+issueTrackerURL = "https://github.com/feytox/feytweaks/issues"
+[[mods]] #mandatory
+modId = "feytweaks" #mandatory
+version = "${file.jarVersion}" #mandatory
+displayName = "FeyTweaks" #mandatory
+logoFile= "icon.png"
+authors = "Feytox" #optional
+description = '''Mod for optimizing signs and beacons.'''
+[[dependencies.feytweaks]] #optional
+modId = "forge" #mandatory
+mandatory = true #mandatory
+versionRange = "[43,)" #mandatory
+ordering = "NONE"
+side = "CLIENT"
+[[dependencies.feytweaks]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,1.20)"
+ordering = "NONE"
+side = "CLIENT"

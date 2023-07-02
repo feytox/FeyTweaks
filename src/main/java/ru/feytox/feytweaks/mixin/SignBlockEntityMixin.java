@@ -1,37 +1,37 @@
 package ru.feytox.feytweaks.mixin;
 
-import net.minecraft.block.entity.SignBlockEntity;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.text.OrderedText;
-import net.minecraft.text.Text;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.Component;
+import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.world.level.block.entity.SignBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import ru.feytox.feytweaks.client.ClientEvents;
 import ru.feytox.feytweaks.client.FTConfig;
-import ru.feytox.feytweaks.client.FeytweaksClient;
 
 import java.util.function.Function;
 
 @Mixin(SignBlockEntity.class)
 public class SignBlockEntityMixin {
 
-    @Inject(method = "isGlowingText", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "hasGlowingText", at = @At("HEAD"), cancellable = true)
     public void onIsGlowingText(CallbackInfoReturnable<Boolean> cir) {
         if (FTConfig.toggleMod && FTConfig.hideGlow
-                && ((SignBlockEntity)(Object) this).getPos().getSquaredDistance(MinecraftClient.getInstance().player.getPos()) >= Math.pow(FTConfig.hideGlowDistance, 2)) {
+                && ((SignBlockEntity)(Object) this).getBlockPos().distToCenterSqr(Minecraft.getInstance().player.position()) >= Math.pow(FTConfig.hideGlowDistance, 2)) {
             cir.setReturnValue(false);
         }
     }
 
-    @Inject(method = "updateSign", at = @At("HEAD"), cancellable = true)
-    public void onUpdateSign(boolean filterText, Function<Text, OrderedText> textOrderingFunction, CallbackInfoReturnable<OrderedText[]> cir) {
-        if (FeytweaksClient.shouldHasText(((SignBlockEntity)(Object) this))) {
-            OrderedText[] emptyRows = new OrderedText[4];
-            emptyRows[0] = OrderedText.EMPTY;
-            emptyRows[1] = OrderedText.EMPTY;
-            emptyRows[2] = OrderedText.EMPTY;
-            emptyRows[3] = OrderedText.EMPTY;
+    @Inject(method = "getRenderMessages", at = @At("HEAD"), cancellable = true)
+    public void onUpdateSign(boolean filterText, Function<Component, FormattedCharSequence> textOrderingFunction, CallbackInfoReturnable<FormattedCharSequence[]> cir) {
+        if (ClientEvents.shouldHasText(((SignBlockEntity)(Object) this))) {
+            FormattedCharSequence[] emptyRows = new FormattedCharSequence[4];
+            emptyRows[0] = FormattedCharSequence.EMPTY;
+            emptyRows[1] = FormattedCharSequence.EMPTY;
+            emptyRows[2] = FormattedCharSequence.EMPTY;
+            emptyRows[3] = FormattedCharSequence.EMPTY;
 
             cir.setReturnValue(emptyRows);
         }
