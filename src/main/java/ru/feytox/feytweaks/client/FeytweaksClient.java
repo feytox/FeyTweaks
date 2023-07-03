@@ -7,15 +7,18 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.block.entity.BeaconBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.SignBlockEntity;
+import net.minecraft.block.entity.SignText;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
+import org.jetbrains.annotations.Nullable;
 import org.lwjgl.glfw.GLFW;
+import ru.feytox.feytweaks.SignTextPosition;
 import ru.feytox.feytweaks.mixin.accessors.WorldRendererAccessor;
 
 @Environment(EnvType.CLIENT)
@@ -39,6 +42,12 @@ public class FeytweaksClient implements ClientModInitializer {
         });
     }
 
+    @Nullable
+    public static BlockPos getSignPos(SignText signText) {
+        if (!(signText instanceof SignTextPosition signTextPosition)) return null;
+        return signTextPosition.ft_getSignPosition();
+    }
+
     public static boolean isOnScreen(BeaconBlockEntity beaconBlockEntity) {
         Frustum frustum = ((WorldRendererAccessor) MinecraftClient.getInstance().worldRenderer).getFrustum();
         BlockPos blockPos = beaconBlockEntity.getPos();
@@ -57,16 +66,22 @@ public class FeytweaksClient implements ClientModInitializer {
 
     }
 
-    public static boolean shouldHasText(SignBlockEntity signBlockEntity) {
-        BlockPos pos = signBlockEntity.getPos();
+    public static boolean shouldRenderText(SignText signText) {
+        BlockPos signPos = FeytweaksClient.getSignPos(signText);
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        if (signPos == null || player == null) return true;
+
         return FTConfig.toggleMod && FTConfig.hideTexts
-                && pos.getSquaredDistance(MinecraftClient.getInstance().player.getPos()) > Math.pow(FTConfig.textDistance, 2);
+                && signPos.getSquaredDistance(MinecraftClient.getInstance().player.getPos()) > Math.pow(FTConfig.textDistance, 2);
     }
 
-    public static boolean shouldHasBeam(BeaconBlockEntity beaconBlockEntity) {
+    public static boolean shouldRenderBeam(BeaconBlockEntity beaconBlockEntity) {
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
+        if (player == null) return true;
+
         BlockPos pos = beaconBlockEntity.getPos();
         return FTConfig.toggleMod && FTConfig.hideBeam
-                && squared2dDistanceTo(Vec3d.ofCenter(pos), MinecraftClient.getInstance().player.getPos()) > Math.pow(FTConfig.beamDistance, 2);
+                && squared2dDistanceTo(Vec3d.ofCenter(pos), player.getPos()) > Math.pow(FTConfig.beamDistance, 2);
     }
 
     private static double squared2dDistanceTo(Vec3d pos1, Vec3d pos2) {

@@ -4,7 +4,5 @@ import net.fabricmc.api.ModInitializer;
 
 public class Feytweaks implements ModInitializer {
     @Override
-    public void onInitialize() {
-
-    }
+    public void onInitialize() {}
 }
