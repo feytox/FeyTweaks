@@ -118,14 +118,12 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${loader_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    implementation(fg.deobf( "maven.modrinth:midnightlib:${project.midnightlib_version}")) {
-        jarJar.ranged(it, "[${project.midnightlib_version},)")
-    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${loader_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    implementation fg.deobf("curse.maven:cloth-config-348521:${cloth_config_version_id}")
 }
 
 jar {
@@ -142,13 +140,6 @@ jar {
                 "Implementation-Vendor"   : "Feytox",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
-    }
-}
-
-jarJar {
-    fromRuntimeConfiguration()
-    dependencies {
-        include(dependency("maven.modrinth:midnightlib"))
     }
 }
 

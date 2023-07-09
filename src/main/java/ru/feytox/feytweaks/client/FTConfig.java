@@ -1,58 +1,46 @@
 package ru.feytox.feytweaks.client;
 
-import eu.midnightdust.lib.config.MidnightConfig;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 import ru.feytox.feytweaks.Feytweaks;
 
-public class FTConfig extends MidnightConfig {
-    @Entry
-    public static boolean toggleMod = true;
+@Config(name = Feytweaks.MOD_ID)
+public class FTConfig implements ConfigData {
+
+    public boolean toggleMod = true;
 
     @Comment
-    public static Comment signs;
+    public Comment signs;
 
-    @Entry
-    public static boolean hideTexts = true;
+    public boolean hideTexts = true;
 
-    @Entry
-    public static double textDistance = 5;
-    
-    @Entry
-    public static boolean hideGlow = false;
+    public double textDistance = 5;
 
-    @Entry(min=0)
-    public static double hideGlowDistance = 5;
+    public boolean hideGlow = false;
 
-    @Entry
-    public static boolean signCulling = true;
+    @ConfigEntry.BoundedDiscrete(max = Integer.MAX_VALUE)
+    public double hideGlowDistance = 5;
 
-    @Entry
-    public static boolean simpleGlow = true;
+    public boolean signCulling = true;
 
-    @Entry
-    public static boolean glowToShadow = false;
+    public boolean simpleGlow = true;
 
-    @Entry
-    public static boolean fastGlowToShadow = false;
+    public boolean glowToShadow = false;
 
-    @Entry
-    public static boolean optimizeGlow = false;
+    public boolean fastGlowToShadow = false;
+
+    public boolean optimizeGlow = false;
 
     @Comment
-    public static Comment beacons;
+    public Comment beacons;
 
-    @Entry
-    public static boolean hideBeam = false;
+    public boolean hideBeam = false;
 
-    @Entry
-    public static double beamDistance = 15;
+    public double beamDistance = 15;
 
-    @Entry
-    public static boolean beaconCulling = true;
+    public boolean beaconCulling = true;
 
-    @Entry
-    public static boolean optimizeBeam = true;
-
-    public static void init() {
-        FTConfig.init(Feytweaks.MOD_ID, FTConfig.class);
-    }
+    public boolean optimizeBeam = true;
 }

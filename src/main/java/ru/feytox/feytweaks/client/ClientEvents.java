@@ -1,5 +1,6 @@
 package ru.feytox.feytweaks.client;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.culling.Frustum;
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 import ru.feytox.feytweaks.Feytweaks;
 import ru.feytox.feytweaks.mixin.accessors.WorldRendererAccessor;
 
+import static ru.feytox.feytweaks.Feytweaks.FTConfig;
 import static ru.feytox.feytweaks.ModEvents.*;
 
 @OnlyIn(Dist.CLIENT)
@@ -29,7 +31,7 @@ public class ClientEvents {
         LocalPlayer player = client.player;
         if (player != null && evt.phase == TickEvent.Phase.END && client.isWindowActive() &&
             OPEN_CONFIG_KEY.consumeClick()) {
-            client.setScreen(FTConfig.getScreen(client.screen, Feytweaks.MOD_ID));
+            client.setScreen(AutoConfig.getConfigScreen(ru.feytox.feytweaks.client.FTConfig.class, null).get());
         }
     }
 

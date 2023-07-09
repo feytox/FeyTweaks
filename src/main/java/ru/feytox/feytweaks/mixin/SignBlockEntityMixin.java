@@ -9,9 +9,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import ru.feytox.feytweaks.client.ClientEvents;
-import ru.feytox.feytweaks.client.FTConfig;
 
 import java.util.function.Function;
+
+import static ru.feytox.feytweaks.Feytweaks.*;
 
 @Mixin(SignBlockEntity.class)
 public class SignBlockEntityMixin {

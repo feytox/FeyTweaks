@@ -17,7 +17,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import ru.feytox.feytweaks.client.ClientEvents;
-import ru.feytox.feytweaks.client.FTConfig;
+
+import static ru.feytox.feytweaks.Feytweaks.*;
 
 @Mixin(BeaconRenderer.class)
 public class BeaconBlockEntityRendererMixin {

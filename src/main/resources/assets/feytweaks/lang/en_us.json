@@ -1,23 +1,23 @@
 {
-  "feytweaks.midnightconfig.title": "FeyTweaks",
+  "text.autoconfig.feytweaks.title": "FeyTweaks",
 
   "key.feytweaks.openConfigKey": "Open config menu",
-  "feytweaks.midnightconfig.toggleMod": "Enable mod: ",
+  "text.autoconfig.feytweaks.option.toggleMod": "Enable mod: ",
 
-  "feytweaks.midnightconfig.signs": "§l§nSigns",
-  "feytweaks.midnightconfig.hideTexts": "Hide text in the distance: ",
-  "feytweaks.midnightconfig.textDistance": "Min. distance to hide §ntext§r: ",
-  "feytweaks.midnightconfig.signCulling": "Text culling: ",
-  "feytweaks.midnightconfig.simpleGlow": "Always hide glow effect: ",
-  "feytweaks.midnightconfig.glowToShadow": "Outline of glow effect -> Text shadow: ",
-  "feytweaks.midnightconfig.fastGlowToShadow": "Outline of glow effect -> Text shadow + Optimization [Beta]: ",
-  "feytweaks.midnightconfig.hideGlow": "Hide glow effect in the distance: ",
-  "feytweaks.midnightconfig.hideGlowDistance": "Min. distance to hide §nglow effect§r: ",
-  "feytweaks.midnightconfig.optimizeGlow": "Glow optimization [Beta]: ",
+  "text.autoconfig.feytweaks.option.signs": "§l§nSigns",
+  "text.autoconfig.feytweaks.option.hideTexts": "Hide text in the distance: ",
+  "text.autoconfig.feytweaks.option.textDistance": "Min. distance to hide §ntext§r: ",
+  "text.autoconfig.feytweaks.option.signCulling": "Text culling: ",
+  "text.autoconfig.feytweaks.option.simpleGlow": "Always hide glow effect: ",
+  "text.autoconfig.feytweaks.option.glowToShadow": "Outline of glow effect -> Text shadow: ",
+  "text.autoconfig.feytweaks.option.fastGlowToShadow": "Outline of glow effect -> Text shadow + Optimization [Beta]: ",
+  "text.autoconfig.feytweaks.option.hideGlow": "Hide glow effect in the distance: ",
+  "text.autoconfig.feytweaks.option.hideGlowDistance": "Min. distance to hide §nglow effect§r: ",
+  "text.autoconfig.feytweaks.option.optimizeGlow": "Glow optimization [Beta]: ",
 
-  "feytweaks.midnightconfig.beacons": "§l§nBeacons",
-  "feytweaks.midnightconfig.hideBeam": "Hide beams in the distance: ",
-  "feytweaks.midnightconfig.beamDistance": "Min. distance to hide beams: ",
-  "feytweaks.midnightconfig.beaconCulling": "Beam culling: ",
-  "feytweaks.midnightconfig.optimizeBeam": "Beam optimization: "
+  "text.autoconfig.feytweaks.option.beacons": "§l§nBeacons",
+  "text.autoconfig.feytweaks.option.hideBeam": "Hide beams in the distance: ",
+  "text.autoconfig.feytweaks.option.beamDistance": "Min. distance to hide beams: ",
+  "text.autoconfig.feytweaks.option.beaconCulling": "Beam culling: ",
+  "text.autoconfig.feytweaks.option.optimizeBeam": "Beam optimization: "
 }
