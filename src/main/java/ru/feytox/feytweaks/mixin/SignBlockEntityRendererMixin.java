@@ -8,8 +8,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import ru.feytox.feytweaks.client.FTConfig;
 import ru.feytox.feytweaks.client.ClientEvents;
+
+import static ru.feytox.feytweaks.Feytweaks.*;
 
 @Mixin(SignRenderer.class)
 public class SignBlockEntityRendererMixin {
