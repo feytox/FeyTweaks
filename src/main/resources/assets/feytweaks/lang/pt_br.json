@@ -1,0 +1,24 @@
+{
+    "feytweaks.midnightconfig.title": "FeyTweaks",
+  
+    "key.feytweaks.openConfigKey": "Abra o menu de configuração",
+    "feytweaks.midnightconfig.toggleMod": "Ativar o Mod: ",
+  
+    "feytweaks.midnightconfig.signs": "§l§nPLacas",
+    "feytweaks.midnightconfig.hideTexts": "Ocultar texto à distância: ",
+    "feytweaks.midnightconfig.textDistance": "mín. distância para ocultar §ntexto§r: ",
+    "feytweaks.midnightconfig.signCulling": "Abate de texto: ",
+    "feytweaks.midnightconfig.simpleGlow": "Sempre ocultar o efeito de brilho: ",
+    "feytweaks.midnightconfig.glowToShadow": "Contorno do efeito de brilho -> Sombra de texto: ",
+    "feytweaks.midnightconfig.fastGlowToShadow": "Contorno do efeito de brilho -> Sombra de texto + Otimização [Beta]: ",
+    "feytweaks.midnightconfig.hideGlow": "Ocultar efeito de brilho à distância: ",
+    "feytweaks.midnightconfig.hideGlowDistance": "mín. distância para esconder o §nefeito de brilho§r: ",
+    "feytweaks.midnightconfig.optimizeGlow": "Otimização de Brilho [Beta]: ",
+  
+    "feytweaks.midnightconfig.beacons": "§l§nSinalizador",
+    "feytweaks.midnightconfig.hideBeam": "Ocultar feixes de luz à distância: ",
+    "feytweaks.midnightconfig.beamDistance": "mín. distância para esconder feixes de luz: ",
+    "feytweaks.midnightconfig.beaconCulling": "Abate de Sinalizador: ",
+    "feytweaks.midnightconfig.optimizeBeam": "Otimização do feixe: "
+  }
+  
