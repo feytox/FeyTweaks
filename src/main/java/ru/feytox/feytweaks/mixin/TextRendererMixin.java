@@ -7,6 +7,7 @@ import net.minecraft.util.DyeColor;
 import org.joml.Matrix4f;
 import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
@@ -30,6 +31,7 @@ public class TextRendererMixin {
         }
     }
 
+    @Unique
     private void fDrawInternal(OrderedText text, float x, float y, int color, boolean shadow, Matrix4f matrix, VertexConsumerProvider vertexConsumerProvider, int light) {
         color = (color & -67108864) == 0 ? color | -16777216 : color;
         Matrix4f matrix4f = new Matrix4f(matrix);

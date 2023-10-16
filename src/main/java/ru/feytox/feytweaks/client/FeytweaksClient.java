@@ -28,8 +28,6 @@ public class FeytweaksClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        FTConfig.init();
-
         KeyBinding openConfigKey = KeyBindingHelper.registerKeyBinding(new KeyBinding("key." + MOD_ID + ".openConfigKey",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_UNKNOWN,

@@ -22,9 +22,6 @@
     ],
     "main": [
       "ru.feytox.feytweaks.Feytweaks"
-    ],
-    "preLaunch": [
-      "ru.feytox.feytweaks.FeyTweaksPreLaunch"
     ]
   },
   "mixins": [
